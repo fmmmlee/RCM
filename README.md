@@ -1,5 +1,5 @@
 # RCM
-##Rainmeter Color Manager##
+## Rainmeter Color Manager
 
 Resources and Libraries used:
 <br />
@@ -10,7 +10,7 @@ ini4j
 Material Design CSS for JavaFX
 
 
-TODO:
+### TODO:
 
 KEY CHALLENGE: How to refresh keyboard using the hex values in regedit? GamingCenter manually retrieves them and updates the keyboard - honestly this should just be done myself straight from an ini file; the registry is probably unnecessary - Gamingcenter clearly (from testing) has to retrieve the values from there before injecting them into the keyboard anyway (via driver(s)?), so any storage method that can hold a hex value should do.
 
