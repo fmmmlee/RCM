@@ -1,5 +1,5 @@
 # RCM
-Rainmeter Color Manager
+##Rainmeter Color Manager##
 
 Resources and Libraries used:
 <br />
