@@ -20,8 +20,7 @@ Eluktronics, to forward to OEM/Developer
 
 
 1. Have a button that ignores the text field and reads the registry values specific to the active rgb gamingcenter profile instead. If this is not possible, have a button for each profile.
-<br />
-  a. If it seems like a usable feature, offer an option to input a custom file path or registry key path to read and output color from.
+   <br /> a. If it seems like a usable feature, offer an option to input a custom file path or registry key path to read and output color from.
   <br />
   b. Additionally, changing CurrentProfile (0-4) in Computer\HKEY_LOCAL_MACHINE\SOFTWARE\OEM\GamingCenter\RGBKeyboardView can swap keyboard profiles.
   <br />
