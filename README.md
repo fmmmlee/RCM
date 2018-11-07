@@ -13,7 +13,9 @@ Material Design CSS for JavaFX
 ### TODO:
 
 KEY CHALLENGE: How to refresh keyboard using the hex values in regedit? GamingCenter manually retrieves them and updates the keyboard - honestly this should just be done myself straight from an ini file; the registry is probably unnecessary - Gamingcenter clearly (from testing) has to retrieve the values from there before injecting them into the keyboard anyway (via driver(s)?), so any storage method that can hold a hex value should do.
-
+<br />
+If writing is not possible, reading is still feasible and can match Rainmeter skin colors to the current value of the keyboard rgb color.
+<br />
 Resources contacted:
 <br />
 Tongfang Forum
@@ -29,7 +31,7 @@ Eluktronics, to forward to OEM/Developer
       
 **2.** Have program read .ini file (if no file, create) with preferred config data + info (e.g. “profile 0 is pink keys”)
 
-**3.** Ideal path for changing colors:
+**3.** Registry path for read/writing colors on Profile # in single-color mode:
       <br />- RGBKeyboardView CurrentProfile ---> #ofProfile
       <br />- Profile# CurrentMode ---------> 0
       <br />- Mode0 CurrentEffect ---------> 0 (for single color)
