@@ -16,6 +16,7 @@ KEY CHALLENGE: How to refresh keyboard using the hex values in regedit? GamingCe
 
 Resources contacted:
 Tongfang Forum
+<br />
 Eluktronics, to forward to OEM/Developer
 
 
