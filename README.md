@@ -12,9 +12,10 @@ Material Design CSS for JavaFX
 
 TODO:
 
-KEY CHALLENGE: How to refresh keyboard using the hex values in regedit? GamingCenter manually retrieves them and updates the keyboard - honestly this should just be done myself straight from an ini file; the registry is probably unnecessary - Gamingcenter clearly has to retrieve the values from there before injecting them into the keyboard anyway (via driver(s)?), so any storage method that can hold a hex value should do.
+KEY CHALLENGE: How to refresh keyboard using the hex values in regedit? GamingCenter manually retrieves them and updates the keyboard - honestly this should just be done myself straight from an ini file; the registry is probably unnecessary - Gamingcenter clearly (from testing) has to retrieve the values from there before injecting them into the keyboard anyway (via driver(s)?), so any storage method that can hold a hex value should do.
 
 Resources contacted:
+<br />
 Tongfang Forum
 <br />
 Eluktronics, to forward to OEM/Developer
