@@ -20,17 +20,17 @@ Eluktronics, to forward to OEM/Developer
 
 
 **1.** Have a button that ignores the text field and reads the registry values specific to the active rgb gamingcenter profile instead. If this is not possible, have a button for each profile.
-      - a. If it seems like a usable feature, offer an option to input a custom file path or registry key path to read and output color from.
+      i. If it seems like a usable feature, offer an option to input a custom file path or registry key path to read and output color from.
       - b. Additionally, changing CurrentProfile (0-4) in Computer\HKEY_LOCAL_MACHINE\SOFTWARE\OEM\GamingCenter\RGBKeyboardView can swap keyboard profiles.
       - c. I believe Mode0 and Mode1 under ProfileX are RGB lighting and startup lighting respectively. ME above ProfileX is the relevant section.
       
 **2.** Have program read .ini file (if no file, create) with preferred config data + info (e.g. “profile 0 is pink keys”)
 
 **3.** Ideal path for changing colors:
-      - a. RGBKeyboardView CurrentProfile ---> #ofProfile
-      - b. Profile# CurrentMode ---------> 0
-      - c. Mode0 CurrentEffect ---------> 0 (for single color)
-      - d. Effect0 ColorBuffer = hex code color formatted as (no #) xx xx xx
+          *a. RGBKeyboardView CurrentProfile ---> #ofProfile
+          *b. Profile# CurrentMode ---------> 0
+          *c. Mode0 CurrentEffect ---------> 0 (for single color)
+          *d. Effect0 ColorBuffer = hex code color formatted as (no #) xx xx xx
 
 **4.** Clean up the GUI.
 
@@ -40,3 +40,10 @@ Eluktronics, to forward to OEM/Developer
 folder with another .ini file that can be read for path values, color profiles, and other possible features.
 
 **7.** Hotkey swapping would be a very useful feature.
+
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
