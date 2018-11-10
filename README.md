@@ -5,6 +5,8 @@ Resources and Libraries used:
 <br />
 JavaFX
 <br />
+JNA
+<br />
 ini4j
 <br />
 Material Design CSS for JavaFX
