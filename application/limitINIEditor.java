@@ -2,8 +2,11 @@ package application;
 //Matthew Lee
 //Started October 5, 2018
 
-//TODO: Edit Frost ini as well
+//TODO: See the README
 
+import com.sun.jna.platform.win32.Advapi32Util;
+import static com.sun.jna.platform.win32.WinReg.HKEY_CURRENT_USER;
+import static com.sun.jna.platform.win32.WinReg.HKEY_LOCAL_MACHINE;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.geometry.Pos;
@@ -13,12 +16,14 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToolBar;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import java.awt.Color;
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 import org.ini4j.InvalidFileFormatException;
 import org.ini4j.Wini;
@@ -26,6 +31,8 @@ import org.ini4j.Wini;
 public class limitINIEditor extends Application{
 	
 	public static void main(String[] args) {
+	    
+	    printTest();
 	    launch(args);
 	}
 	
@@ -129,6 +136,29 @@ public class limitINIEditor extends Application{
         primaryStage.setScene(appWindow);
         primaryStage.show();
     
+        //hex to RGB
+        
 		
+	}
+	
+	public static Color removeOddFormatting(String colorStr) {
+        return Color.decode(colorStr);
+    }
+    
+	
+	//returns the currently active RGB profile as configured in GamingCenter
+	public static String getActiveProfile() {
+		return Advapi32Util.registryGetStringValue
+                (HKEY_LOCAL_MACHINE,
+                        "SOFTWARE\\OEM\\GamingCenter\\RGBKeyboardView", "CurrentProfile");
+	}
+    
+	//currently returns byte array - need the string data that you see in regedit or somehow convert to the proper hex value, is just hex number split into 3 sets of 2 characters
+	public byte[] getBinaryValue() {
+			try {
+				return Advapi32Util.registryGetBinaryValue(HKEY_LOCAL_MACHINE, "SOFTWARE\\OEM\\GamingCenter\\RGBKeyboardView\\ME\\Profile0\\Mode0\\Effect0", "ColorBuffer");
+			} catch (RuntimeException re) {
+				throw new RuntimeException("Registry key is not of type Binary. ");
+			}
 	}
 }
