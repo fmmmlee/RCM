@@ -5,7 +5,6 @@ package application;
 //TODO: See the README
 
 import com.sun.jna.platform.win32.Advapi32Util;
-import static com.sun.jna.platform.win32.WinReg.HKEY_CURRENT_USER;
 import static com.sun.jna.platform.win32.WinReg.HKEY_LOCAL_MACHINE;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -23,7 +22,6 @@ import javafx.stage.Stage;
 import java.awt.Color;
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 
 import org.ini4j.InvalidFileFormatException;
 import org.ini4j.Wini;
@@ -32,7 +30,6 @@ public class limitINIEditor extends Application{
 	
 	public static void main(String[] args) {
 	    
-	    printTest();
 	    launch(args);
 	}
 	
