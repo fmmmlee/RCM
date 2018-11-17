@@ -14,7 +14,7 @@ Material Design CSS for JavaFX
 
 ### TODO:
 
-KEY CHALLENGE: How to refresh keyboard using the hex values in regedit? GamingCenter manually retrieves them and updates the keyboard - honestly this should just be done myself straight from an ini file; the registry is probably unnecessary - Gamingcenter clearly (from testing) has to retrieve the values from there before injecting them into the keyboard anyway (via driver(s)?), so any storage method that can hold a hex value should do.
+KEY CHALLENGE: How to refresh keyboard using the hex values in regedit? GamingCenter manually retrieves them and updates the keyboard - honestly this should just be done myself straight from an ini file; the registry is probably unnecessary for use while the computer is powered on (registry is used for startup, I would guess)- Gamingcenter clearly (from testing) has to retrieve the values from there before injecting them into the keyboard anyway (via driver(s)?), so any storage method that can hold a hex value should do.
 <br />
 If writing is not possible, reading is still feasible and can match Rainmeter skin colors to the current value of the keyboard rgb color.
 <br />
